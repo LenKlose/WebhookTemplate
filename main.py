@@ -21,23 +21,22 @@ async def document_created(request: Request, hook: DocumentCreatedWebhook, repo_
     # ToDo: Call your ai service
     print(len(file))
 
-    # ToDo: Update properties based on your data
-    # list of properties under /dms/r/{repo_uuid}/source
+    # ToDo: Update document_type and sender based on your data
+    # All existing property IDs can be found at: https://ai-mailroom.d-velop.cloud/dms/r/0188b03e-e468-46f9-a534-a48d3faafe88/source
+    document_type = "Auftrag" # one of: [Angebot, Auftrag, Auftragsbestätigung, Lieferschein, Rechnung, Schriftwechsel, Vertrag, sonstiges]
+    sender = "The Best Company GmbH"
+
     update_properties = [
         {
-            "key": "dv.folder.customer.rf.SalesOrderNumber",
-            "values": [hook.doc.id]
+            "key": "a1a1dad4-dc9e-434c-bfc0-074cbabe0c13",
+            "values": [document_type]
         },
         {
-            "key":  "dv.folder.customer.example.change",
-            "values": [1234]
+            "key":  "c3d93524-db1f-4d09-bbdb-d94fe3980abe",
+            "values": [sender]
         }
     ]
-
-    # ToDo: Update category based on your data
-    # list of categories under /dms/r/{repo_uuid}/source
-    update_category = "dv.folder.customer.dt.CustomerOrder"  # or hook.docType.id
-
+    update_category = "ee98deea-7674-4692-89f3-31cc57c5dee3"  # 02 Eingangspost (klassifiziert)
     update_document_metadata(request, hook, repo_uuid, update_category, update_properties)
 
 app.include_router(router)

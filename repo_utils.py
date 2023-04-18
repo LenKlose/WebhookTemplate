@@ -6,10 +6,10 @@ from tqdm import tqdm
 
 from core.constants import API_KEY, EDITOR
 
-BASE_URI = ""
-REPO_ID = ""
-SOURCE_CATEGORY = "" # objectIdentifier
-TARGET_CATEGORY = "" # objectIdentifier
+BASE_URI = "https://ai-mailroom.d-velop.cloud"
+REPO_ID = "0188b03e-e468-46f9-a534-a48d3faafe88"
+SOURCE_CATEGORY = "c35fb"  # objectIdentifier
+TARGET_CATEGORY = "57582"  # objectIdentifier
 
 SEARCH_URL = f"/dms/r/{REPO_ID}/srm?pagesize=1000&sourceid=/dms/r/{REPO_ID}/source"
 DOCUMENT_URL = f"{BASE_URI}/dms/r/{REPO_ID}/o2m/"
@@ -36,14 +36,15 @@ def _upload_document(doc_id: str):
             "properties": [{
                     "key": "property_state",
                     "values": ["Processing"]
-                },{
-                    "key": "property_editor",
-                    "values": [EDITOR]
-                }
+            }, {
+                "key": "property_editor",
+                "values": [EDITOR]
+            }
             ]
         }
     })
     response.raise_for_status()
+
 
 def start_analysis():
     response = requests.get(BASE_URI + SEARCH_URL + f"&sourcecategories=\"{SOURCE_CATEGORY}\"", headers=headers)
@@ -57,21 +58,23 @@ def _set_editor(doc_id: str):
         "sourceId": SOURCE_ID,
         "sourceProperties": {
             "properties": [{
-                    "key": "property_state",
-                    "values": ["Processing"]
-                },{
-                    "key": "property_editor",
-                    "values": [EDITOR]
-                }
+                "key": "property_state",
+                "values": ["Processing"]
+            }, {
+                "key": "property_editor",
+                "values": [EDITOR]
+            }
             ]
         }
     })
     response.raise_for_status()
 
+
 def _delete_doc(doc_id: str):
     _set_editor(doc_id)
     response = requests.delete(DOCUMENT_URL + doc_id, headers=headers)
     response.raise_for_status()
+
 
 def reset_repo():
     doc_ids = []
@@ -81,9 +84,10 @@ def reset_repo():
         doc_ids.extend([doc["id"] for doc in search_response["items"] if doc["sourceCategories"][0] != SOURCE_CATEGORY])
         if not (next_url := search_response["_links"].get("next", {}).get("href")):
             break
-    
+
     with Pool(8) as p:
         list(tqdm(p.imap(_delete_doc, doc_ids), total=len(doc_ids)))
+
 
 if __name__ == "__main__":
     if sys.argv[1].lower() == "reset":
