@@ -22,21 +22,17 @@ async def document_created(request: Request, hook: DocumentCreatedWebhook, repo_
     print(len(file))
 
     # ToDo: Update properties based on your data
-    # list of properties under /dms/r/{repo_uuid}/source
+    # list of properties under https://ai-carfile.d-velop.cloud/dms/r/1332a60a-46e2-47f8-826c-d572e27576ae/source
     update_properties = [
         {
-            "key": "dv.folder.customer.rf.SalesOrderNumber",
-            "values": [hook.doc.id]
-        },
-        {
-            "key":  "dv.folder.customer.example.change",
-            "values": [1234]
+            "key": "943ac291-179e-48d0-9c21-ef738181a645",  # Property: Kategorie Verkaufsdokument
+            "values": ["Fahrzeugbrief"]
         }
     ]
 
     # ToDo: Update category based on your data
-    # list of categories under /dms/r/{repo_uuid}/source
-    update_category = "dv.folder.customer.dt.CustomerOrder"  # or hook.docType.id
+    # list of categories under https://ai-carfile.d-velop.cloud/dms/r/1332a60a-46e2-47f8-826c-d572e27576ae/source
+    update_category = "f26bea76-7dbf-4e53-9169-81ddb3e2f8c4"  # Category: Fahrzeug - Verkaufsdokument
 
     update_document_metadata(request, hook, repo_uuid, update_category, update_properties)
 

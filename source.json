@@ -1,0 +1,238 @@
+{
+    "id": "/dms/r/1332a60a-46e2-47f8-826c-d572e27576ae/source",
+    "displayName": "d.velop documents",
+    "properties": [
+        {
+            "key": "44960fc2-36eb-4602-bb0b-18c021bda67b",
+            "type": "String",
+            "displayName": "Geschäfts-Vorgangsnummer"
+        },
+        {
+            "key": "0617d84b-1e33-449d-8407-639f5ceef34b",
+            "type": "String",
+            "displayName": "Bestellstatus"
+        },
+        {
+            "key": "7a1d3ea2-35dd-483b-a9ce-b9ed52cbbc14",
+            "type": "String",
+            "displayName": "Bestellnummer Hersteller"
+        },
+        {
+            "key": "b5e7a357-6a42-4935-bc36-2499a503c44e",
+            "type": "String",
+            "displayName": "Fahrgestellnummer"
+        },
+        {
+            "key": "12218ec3-a2c4-4b78-88e9-e5a5fdac3add",
+            "type": "String",
+            "displayName": "Fahrzeugmarke"
+        },
+        {
+            "key": "b100620e-42b5-4128-a7ba-99353bbe3717",
+            "type": "String",
+            "displayName": "Fahrzeugtyp"
+        },
+        {
+            "key": "29f5400d-5f86-40fa-8765-4f111e483293",
+            "type": "String",
+            "displayName": "Fahrzeugart"
+        },
+        {
+            "key": "b13556c8-a15a-4447-b0af-403866fb9977",
+            "type": "String",
+            "displayName": "Status Inzahlungnahme"
+        },
+        {
+            "key": "e7bbbdf0-e1b5-4df2-9445-c43658ef862c",
+            "type": "String",
+            "displayName": "Status Ablöse"
+        },
+        {
+            "key": "904d7ea7-d97f-4bc0-8787-5b52ad4f4189",
+            "type": "String",
+            "displayName": "Kunde - Nummer"
+        },
+        {
+            "key": "b569f79d-1f8a-49e9-b486-8d841de0320f",
+            "type": "String",
+            "displayName": "Kunde - Name"
+        },
+        {
+            "key": "1cf9b320-3a7b-48c5-8e2c-1841206b2ddd",
+            "type": "String",
+            "displayName": "Kunde - Vorname"
+        },
+        {
+            "key": "ded6b316-ef53-47d2-a983-31d2c5ee2bf5",
+            "type": "String",
+            "displayName": "Kunde - Straße"
+        },
+        {
+            "key": "cab0a38b-d4b3-45ab-b1a0-567b4074a3c7",
+            "type": "String",
+            "displayName": "Kunde - PLZ"
+        },
+        {
+            "key": "6999633a-08aa-4a21-a985-324990ef0b49",
+            "type": "String",
+            "displayName": "Kunde - Ort"
+        },
+        {
+            "key": "5cf6758f-55b5-4444-b04a-215e351d04bb",
+            "type": "String",
+            "displayName": "Kunde - Land"
+        },
+        {
+            "key": "3bc340fc-314f-4981-a34f-f478b2a94630",
+            "type": "String",
+            "displayName": "Verkäufer"
+        },
+        {
+            "key": "4eced826-6c54-4922-8361-eaa206bd1829",
+            "type": "String",
+            "displayName": "Sparte"
+        },
+        {
+            "key": "c314c166-3cd6-4de4-abeb-7ce056673df0",
+            "type": "String",
+            "displayName": "Standort - Name"
+        },
+        {
+            "key": "b3499c6f-18bd-444e-96ad-72f3b6b00d75",
+            "type": "String",
+            "displayName": "Mandant - Name"
+        },
+        {
+            "key": "b150e7b8-944d-4659-885c-361ff21662af",
+            "type": "String",
+            "displayName": "UPD-Flag"
+        },
+        {
+            "key": "ff892309-79a6-46bf-b672-e7bbea6c2400",
+            "type": "String",
+            "displayName": "Kategorie Servicedokument"
+        },
+        {
+            "key": "e14f9f41-e150-467a-bd23-d48089a9c65c",
+            "type": "String",
+            "displayName": "Auftragsnummer"
+        },
+        {
+            "key": "dab7d553-d491-4f02-9ef4-8f4a92a40cb3",
+            "type": "String",
+            "displayName": "Amtl. Kennzeichen"
+        },
+        {
+            "key": "6e37fc5b-eae7-4fec-b4d1-d633e3c79fe7",
+            "type": "String",
+            "displayName": "Serviceberater"
+        },
+        {
+            "key": "732a06d5-0f78-46f3-80f0-a756d1e3a30e",
+            "type": "Date",
+            "displayName": "Belegdatum"
+        },
+        {
+            "key": "536fcf2b-ce3e-46ed-b9b2-2524ed70df39",
+            "type": "String",
+            "displayName": "Belegnummer"
+        },
+        {
+            "key": "1ce5b83c-fc45-477d-8754-4d5b93aaea34",
+            "type": "Money",
+            "displayName": "Bruttobetrag"
+        },
+        {
+            "key": "1f13b463-4650-4591-a819-3394776c43d3",
+            "type": "String",
+            "displayName": "Import-ID"
+        },
+        {
+            "key": "08843cd9-756f-4c96-95f4-fec504a1c146",
+            "type": "String",
+            "displayName": "Kategorie Ankaufsdokument"
+        },
+        {
+            "key": "dv.fol.basis.Nettobetrag",
+            "type": "Money",
+            "displayName": "Nettobetrag"
+        },
+        {
+            "key": "16e03907-1d02-4d5c-bac2-8283058e4fbb",
+            "type": "Date",
+            "displayName": "Gültig von"
+        },
+        {
+            "key": "1de5b22a-f651-4c99-b7d8-905a2454b38f",
+            "type": "Date",
+            "displayName": "Gültig bis"
+        },
+        {
+            "key": "943ac291-179e-48d0-9c21-ef738181a645",
+            "type": "String",
+            "displayName": "Kategorie Verkaufsdokument"
+        }
+    ],
+    "categories": [
+        {
+            "key": "3abe0701-757c-4251-8ce5-e71e3cde7775",
+            "displayName": "Geschäftsakte"
+        },
+        {
+            "key": "06602886-0139-4947-a536-c19bad1f9d77",
+            "displayName": "Fahrzeug - Servicedokument"
+        },
+        {
+            "key": "23225033-41b1-4546-8b95-6aaff59267bf",
+            "displayName": "unklassifizierte Testdokumente"
+        },
+        {
+            "key": "541b1681-e26d-453e-81b5-7a35480eb456",
+            "displayName": "Transportschadenakte Toyota"
+        },
+        {
+            "key": "99c15ee1-247f-45f1-ba47-3e78b4a555b8",
+            "displayName": "Fahrzeugakte"
+        },
+        {
+            "key": "b44d9f66-6bd3-4e37-b2ae-5b27ec2c00ab",
+            "displayName": "Fahrzeug - Ankaufsdokument"
+        },
+        {
+            "key": "013551f4-c50a-4611-8377-51da3128e17a",
+            "displayName": "Serviceakte"
+        },
+        {
+            "key": "c2e259b6-2748-4d76-ae4c-9bb4598ddc54",
+            "displayName": "Transportschadenakte Renault"
+        },
+        {
+            "key": "a2466bf0-3257-41b2-b6fe-f92b743e5aaa",
+            "displayName": "Angebot / Kostenvoranschlag"
+        },
+        {
+            "key": "8be818ba-fdfb-413d-a0fc-be3ffa13e744",
+            "displayName": "Quelle"
+        },
+        {
+            "key": "f6b64872-41e1-4f3e-82f1-cd88e242ccc4",
+            "displayName": "Datenschutzerklärung"
+        },
+        {
+            "key": "d9ab6fc4-af00-452b-8276-8f1544a15ca6",
+            "displayName": "Kundenakte"
+        },
+        {
+            "key": "6abfb352-078e-4eb4-bffa-0e12713d9173",
+            "displayName": "Transportschadendokument Renault"
+        },
+        {
+            "key": "44574083-5deb-4bbc-bd30-c80648b26cc8",
+            "displayName": "Transportschadendokument Toyota"
+        },
+        {
+            "key": "f26bea76-7dbf-4e53-9169-81ddb3e2f8c4",
+            "displayName": "Fahrzeug - Verkaufsdokument"
+        }
+    ]
+}
