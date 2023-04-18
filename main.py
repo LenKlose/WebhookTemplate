@@ -9,7 +9,7 @@ app = FastAPI(title="Webhook App")
 router = APIRouter(prefix=f"/{APP_NAME}")
 
 
-@router.get('/')
+@router.get('')
 async def root():
     return JSONResponse({"app": "webhooktemplate"}, status_code=200)
 
